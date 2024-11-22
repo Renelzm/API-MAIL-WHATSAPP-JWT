@@ -47,6 +47,8 @@ MAILER_SECRET_KEY="Proveido por gmail se ve algo asi sdad jlhl mklk kljd"
 MAILER_SERVICE=gmail
 ```
 
+mailersecretkeygmail:"https://myaccount.google.com/u/1/apppasswords"
+
 ## 1- Ejecutar ruta /api/seed con datos de nombre, correo y/o password para crear admin
 
 Este paso crea un administrador general, solo puede ser usado una unica ocación.
@@ -90,10 +92,16 @@ NOTA: Es necesario revisar los services en msg para poderlos usar en medio de la
 
 ```javascript
 {
-  "to": "521 + 10 digitos de numero", 
+  "to": "[10 digitos de numero, ....]", 
   "message": "¡Hola, este es un mensaje de prueba!"
 }
 ```
+
+Tenemos 3 opciones de envio:
+
+1. Enviar mensaje sin validar si exsite en whatsapp.
+2. Validar exsitencia de numeros y despues enviar los whatsapps.
+3. Revisar cada whatsapp priemero si existe despues enviar uno por uno.
 
 ### Metodos para diferentes sesiones o una por defecto
 
@@ -115,6 +123,10 @@ session = "numero de celular"
 ```
 
 ## 3.- Servicio de correo
+
+Esnecesaria la key este es el enlace que lleva a ese punto:
+
+url: https://myaccount.google.com/u/1/apppasswords
 
 ```javascript
 {
